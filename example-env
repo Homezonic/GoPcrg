@@ -1,0 +1,6 @@
+VITE_STORAGE_PREFIX="nx"
+VITE_MUIX_LICENSE_KEY="YOUR_MUIX_LICENSE_KEY"
+
+# Supabase Configuration
+VITE_SUPABASE_URL=https://kvnqsawxkclejcqesfus.supabase.co
+VITE_SUPABASE_ANON_KEY=sb_publishable_qjNnus_D159SAhTb78JgoA_7HdyJ8A3
