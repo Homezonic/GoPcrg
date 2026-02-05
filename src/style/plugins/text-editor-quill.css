@@ -159,10 +159,10 @@
   }
 
   .ql-editor {
-    @apply !rtl:text-right;
+    @apply rtl:!text-right;
   }
 
   .ql-formats {
-    @apply !ltr:mr-4 !ltr:ml-0 !rtl:mr-0 !rtl:ml-4;
+    @apply ltr:!mr-4 ltr:!ml-0 rtl:!mr-0 rtl:!ml-4;
   }
 }

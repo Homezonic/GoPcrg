@@ -153,7 +153,7 @@
     @apply !text-text-secondary h-4 w-4;
   }
   .MuiAutocomplete-endAdornment {
-    @apply !ltr:right-2.5 !ltr:left-[unset] !rtl:right-[unset] !rtl:left-2.5;
+    @apply ltr:!right-2.5 ltr:!left-[unset] rtl:!right-[unset] rtl:!left-2.5;
   }
 
   /* Loading and no result */

@@ -29,7 +29,7 @@
   }
 
   .MuiTooltip-popper[data-popper-placement*="right"] {
-    @apply !ml-2 !rtl:mr-2;
+    @apply !ml-2 rtl:!mr-2;
     .MuiTooltip-arrow {
       @apply !top-1/2 ms-0 transform-[translate(0,-50%!)] overflow-visible bg-transparent rtl:right-[unset] rtl:left-0;
 
@@ -48,7 +48,7 @@
   }
 
   .MuiTooltip-popper[data-popper-placement*="left"] {
-    @apply !mr-2 !rtl:ml-2;
+    @apply !mr-2 rtl:!ml-2;
     .MuiTooltip-arrow {
       @apply !top-1/2 me-0 transform-[translate(0,-50%!)] overflow-visible bg-transparent rtl:right-0;
 
