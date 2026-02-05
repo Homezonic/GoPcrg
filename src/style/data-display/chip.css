@@ -31,7 +31,7 @@
   }
 
   .MuiChip-avatarMedium {
-    @apply - !ms-0.5 !h-5 !w-5;
+    @apply !-ms-0.5 !h-5 !w-5;
   }
 
   .MuiChip-avatarSmall {
