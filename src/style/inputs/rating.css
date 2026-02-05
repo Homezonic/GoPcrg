@@ -47,11 +47,11 @@
 
   .MuiRating-icon.MuiRating-iconEmpty svg,
   .MuiRating-icon.MuiRating-iconEmpty svg.outlined {
-    @apply text-grey-200!;
+    @apply !text-grey-200;
   }
 
   .MuiRating-icon.MuiRating-iconEmpty svg.contained {
-    @apply text-grey-50!;
+    @apply !text-grey-50;
   }
 
   .MuiRating-decimal label,

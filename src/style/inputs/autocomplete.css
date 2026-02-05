@@ -6,17 +6,17 @@
   .MuiAutocomplete-root {
     @apply leading-0;
     .MuiAutocomplete-inputRoot {
-      @apply font-body h-auto ps-[1rem]! pe-8 pt-[1.25rem]! pb-[.125rem]! text-base leading-5;
+      @apply font-body h-auto !ps-[1rem] pe-8 !pt-[1.25rem] !pb-[.125rem] text-base leading-5;
 
       .MuiAutocomplete-input {
-        @apply rounded-none! ps-[0rem]! pe-[0.5rem]! pt-[0.25rem]! pb-[0.25rem]!;
+        @apply !rounded-none !ps-[0rem] !pe-[0.5rem] !pt-[0.25rem] !pb-[0.25rem];
       }
 
       &.MuiInputBase-sizeSmall {
-        @apply rounded-md pe-10! pt-[1rem]! pb-[.125rem]!;
+        @apply rounded-md !pe-10 !pt-[1rem] !pb-[.125rem];
 
         .MuiAutocomplete-input {
-          @apply py-[0.125rem]!;
+          @apply !py-[0.125rem];
         }
       }
 
@@ -27,7 +27,7 @@
 
     &.MuiAutocomplete-hasClearIcon.MuiAutocomplete-hasPopupIcon {
       .MuiAutocomplete-inputRoot {
-        @apply pe-14!;
+        @apply !pe-14;
       }
     }
 
@@ -47,20 +47,20 @@
       @apply bg-background-paper outline-primary/40 border-transparent outline-2 -outline-offset-1;
     }
     &.Mui-focused:hover {
-      @apply bg-background-paper!;
+      @apply !bg-background-paper;
     }
 
     &.Mui-disabled:hover {
-      @apply outline-transparent!;
+      @apply !outline-transparent;
     }
   }
 
   /* Autocomplete outlined */
   .MuiAutocomplete-inputRoot.MuiOutlinedInput-root {
-    @apply py-[0.5rem]!;
+    @apply !py-[0.5rem];
 
     &.MuiInputBase-sizeSmall {
-      @apply py-[0.375rem]!;
+      @apply !py-[0.375rem];
     }
 
     .MuiCircularProgress-root {
@@ -71,9 +71,9 @@
   /* Autocomplete standard */
   .MuiAutocomplete-root {
     .MuiInputBase-root.MuiInput-root {
-      @apply bg-grey-25 font-body text-text-primary placeholder:opacity-disabled h-auto min-h-0 rounded-lg px-4! py-1.5! pe-8! text-base leading-5 outline-2 -outline-offset-1 outline-transparent transition-all;
+      @apply bg-grey-25 font-body text-text-primary placeholder:opacity-disabled h-auto min-h-0 rounded-lg !px-4 !py-1.5 !pe-8 text-base leading-5 outline-2 -outline-offset-1 outline-transparent transition-all;
       &.Mui-focused {
-        @apply outline-primary/40! border-transparent outline-2 -outline-offset-1;
+        @apply !outline-primary/40 border-transparent outline-2 -outline-offset-1;
       }
       &:hover:not(.Mui-disabled) {
         @apply bg-grey-50;
@@ -82,7 +82,7 @@
         @apply bg-grey-25 border-transparent;
       }
       .MuiInputBase-input {
-        @apply rounded-none bg-transparent! outline-hidden!;
+        @apply rounded-none !bg-transparent !outline-hidden;
       }
 
       &.MuiInputBase-sizeSmall {
@@ -92,7 +92,7 @@
 
     &.MuiAutocomplete-hasClearIcon.MuiAutocomplete-hasPopupIcon {
       .MuiInputBase-root.MuiInput-root {
-        @apply pe-14!;
+        @apply !pe-14;
       }
     }
 
@@ -105,7 +105,7 @@
   .MuiFormControl-root .MuiAutocomplete-root {
     .outlined {
       .MuiInputBase-root.MuiInput-root {
-        @apply border-grey-200 font-body text-text-primary placeholder:opacity-disabled h-auto min-h-0 rounded-lg border border-solid bg-transparent px-4! py-[calc(0.375rem-1px)]! pe-8! text-base leading-5 outline-2 -outline-offset-1 outline-transparent transition-all;
+        @apply border-grey-200 font-body text-text-primary placeholder:opacity-disabled h-auto min-h-0 rounded-lg border border-solid bg-transparent !px-4 !py-[calc(0.375rem-1px)] !pe-8 text-base leading-5 outline-2 -outline-offset-1 outline-transparent transition-all;
         &.Mui-focused {
           @apply outline-primary/40 border-transparent outline-2 -outline-offset-1;
         }
@@ -116,7 +116,7 @@
           @apply border-transparent bg-transparent;
         }
         .MuiInputBase-input {
-          @apply rounded-none border-none! bg-transparent! outline-hidden!;
+          @apply rounded-none !border-none !bg-transparent !outline-hidden;
         }
 
         &.MuiInputBase-sizeSmall {
@@ -127,14 +127,14 @@
 
     &.MuiAutocomplete-hasClearIcon.MuiAutocomplete-hasPopupIcon {
       .MuiInputBase-root.MuiInput-root {
-        @apply pe-14!;
+        @apply !pe-14;
       }
     }
   }
 
   /* Circular progress */
   .MuiAutocomplete-root .MuiCircularProgress-root {
-    @apply text-text-primary h-4! w-4!;
+    @apply text-text-primary !h-4 !w-4;
 
     .MuiCircularProgress-circle {
       stroke-width: 3;
@@ -144,16 +144,16 @@
   /* Autocomplete icons */
   .MuiAutocomplete-clearIndicator,
   .MuiAutocomplete-popupIndicator {
-    @apply text-text-secondary p-0.5!;
+    @apply text-text-secondary !p-0.5;
     &:hover {
-      @apply text-primary! bg-transparent!;
+      @apply !text-primary !bg-transparent;
     }
   }
   .MuiChip-deleteIcon {
-    @apply text-text-secondary! h-4 w-4;
+    @apply !text-text-secondary h-4 w-4;
   }
   .MuiAutocomplete-endAdornment {
-    @apply ltr:right-2.5! ltr:left-[unset]! rtl:right-[unset]! rtl:left-2.5!;
+    @apply !ltr:right-2.5 !ltr:left-[unset] !rtl:right-[unset] !rtl:left-2.5;
   }
 
   /* Loading and no result */
@@ -165,10 +165,10 @@
 
   /* Autocomplete container */
   .MuiAutocomplete-paper {
-    @apply bg-background-paper shadow-darker-sm! outline-grey-50 rounded-lg px-2 py-2 outline-1;
+    @apply bg-background-paper !shadow-darker-sm outline-grey-50 rounded-lg px-2 py-2 outline-1;
 
     &:empty {
-      @apply m-0! border-none! p-0! outline-hidden!;
+      @apply !m-0 !border-none !p-0 !outline-hidden;
     }
   }
 
@@ -192,12 +192,12 @@
 
     &.Mui-selected,
     &[aria-selected="true"] {
-      @apply bg-grey-500/10! text-primary;
+      @apply !bg-grey-500/10 text-primary;
     }
 
     &.Mui-focused,
     &.Mui-focusVisible {
-      @apply bg-grey-50!;
+      @apply !bg-grey-50;
     }
   }
 

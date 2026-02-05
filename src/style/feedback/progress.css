@@ -1,19 +1,19 @@
 @layer utilities {
   .MuiCircularProgress-root {
     &.small {
-      @apply h-4! w-4!;
+      @apply !h-4 !w-4;
     }
 
     &.medium {
-      @apply h-5! w-5!;
+      @apply !h-5 !w-5;
     }
 
     &.large {
-      @apply h-6! w-6!;
+      @apply !h-6 !w-6;
     }
 
     &.xlarge {
-      @apply h-8! w-8!;
+      @apply !h-8 !w-8;
     }
   }
 

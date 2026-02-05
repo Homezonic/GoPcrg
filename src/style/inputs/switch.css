@@ -149,7 +149,7 @@
 
   /* Label placement */
   .MuiFormControlLabel-labelPlacementEnd {
-    @apply ms-0! me-0!;
+    @apply !ms-0 !me-0;
 
     .MuiSwitch-root {
       @apply me-2.5;
@@ -157,7 +157,7 @@
   }
 
   .MuiFormControlLabel-labelPlacementStart {
-    @apply ms-0! me-0!;
+    @apply !ms-0 !me-0;
 
     .MuiSwitch-root {
       @apply ms-2.5;

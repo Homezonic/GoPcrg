@@ -8,11 +8,11 @@
   .MuiSelect-icon {
     @apply text-text-secondary top-[calc(50%-0.625rem)] ltr:right-2.5 rtl:right-[unset] rtl:left-2.5;
     &:hover {
-      @apply text-primary! bg-transparent!;
+      @apply !text-primary !bg-transparent;
     }
   }
 
   .MuiSelect-root.Mui-readOnly .MuiSelect-select {
-    @apply cursor-default!;
+    @apply !cursor-default;
   }
 }

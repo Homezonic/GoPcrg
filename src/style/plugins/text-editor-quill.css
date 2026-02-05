@@ -7,69 +7,69 @@
     @apply font-body;
 
     .ql-toolbar.ql-snow {
-      @apply font-body! rounded-t-lg;
+      @apply !font-body rounded-t-lg;
     }
 
     .ql-container.ql-snow {
-      @apply font-body! rounded-b-lg text-base!;
+      @apply !font-body rounded-b-lg !text-base;
     }
 
     &.standard {
       .ql-toolbar.ql-snow {
-        @apply bg-grey-25! border-b-grey-100! border-s-0! border-e-0! border-t-0! border-b!;
+        @apply !bg-grey-25 !border-b-grey-100 !border-s-0 !border-e-0 !border-t-0 !border-b;
       }
 
       .ql-container.ql-snow {
-        @apply bg-grey-25! border-none!;
+        @apply !bg-grey-25 !border-none;
       }
     }
 
     &.outlined {
       .ql-toolbar.ql-snow {
-        @apply border-grey-200!;
+        @apply !border-grey-200;
       }
 
       .ql-container.ql-snow {
-        @apply border-grey-200!;
+        @apply !border-grey-200;
       }
     }
   }
 
   .ql-toolbar.ql-snow {
-    @apply py-1.5!;
+    @apply !py-1.5;
   }
 
   .ql-snow.ql-toolbar button,
   .ql-snow .ql-toolbar button {
-    @apply text-text-primary! h-8! w-8! rounded-sm! p-1.5!;
+    @apply !text-text-primary !h-8 !w-8 !rounded-sm !p-1.5;
 
     &:hover {
-      @apply bg-grey-25! text-primary!;
+      @apply !bg-grey-25 !text-primary;
     }
   }
 
   .ql-toolbar.ql-snow .ql-picker {
-    @apply text-text-primary! h-8! w-8! rounded-sm! p-1.5!;
+    @apply !text-text-primary !h-8 !w-8 !rounded-sm !p-1.5;
     &:hover {
-      @apply bg-grey-25!;
+      @apply !bg-grey-25;
       .ql-picker-label {
-        @apply text-primary!;
+        @apply !text-primary;
       }
     }
 
     .ql-picker-label {
-      @apply border-none! p-0!;
+      @apply !border-none !p-0;
     }
   }
 
   .ql-toolbar.ql-snow .ql-picker.ql-header {
-    @apply h-8! w-auto! rounded-sm! px-3! py-1.5!;
+    @apply !h-8 !w-auto !rounded-sm !px-3 !py-1.5;
 
     .ql-picker-label {
-      @apply border-none! p-0!;
+      @apply !border-none !p-0;
 
       &:before {
-        @apply text-text-primary me-8!;
+        @apply text-text-primary !me-8;
       }
 
       &:after {
@@ -79,7 +79,7 @@
       }
 
       &:before {
-        @apply leading-5!;
+        @apply !leading-5;
       }
 
       svg {
@@ -89,7 +89,7 @@
 
     &:hover {
       .ql-picker-label {
-        @apply bg-grey-25! text-primary!;
+        @apply !bg-grey-25 !text-primary;
 
         &:after {
           @apply bg-primary;
@@ -103,31 +103,31 @@
   }
 
   .ql-picker-options {
-    @apply bg-background-paper! shadow-darker-sm! outline-grey-50! rounded-lg! border-none! p-2! outline-1!;
+    @apply !bg-background-paper !shadow-darker-sm !outline-grey-50 !rounded-lg !border-none !p-2 !outline-1;
 
     .ql-picker-item {
-      @apply rounded-sm! px-4! py-2!;
+      @apply !rounded-sm !px-4 !py-2;
 
       &:before {
-        @apply text-base!;
+        @apply !text-base;
       }
     }
   }
 
   .ql-picker:not(.ql-color-picker) {
     .ql-picker-item:hover {
-      @apply bg-grey-25! text-primary!;
+      @apply !bg-grey-25 !text-primary;
     }
   }
 
   .ql-snow .ql-color-picker .ql-picker-options {
-    @apply w-58!;
+    @apply !w-58;
 
     .ql-picker-item {
-      @apply m-1! rounded-[0.625rem]! px-2.5! py-2.5!;
+      @apply !m-1 !rounded-[0.625rem] !px-2.5 !py-2.5;
 
       &:hover {
-        @apply outline-primary/40! border border-transparent! outline-2!;
+        @apply !outline-primary/40 border !border-transparent !outline-2;
       }
     }
   }
@@ -146,23 +146,23 @@
   .ql-snow .ql-toolbar .ql-picker-item:hover,
   .ql-snow.ql-toolbar .ql-picker-item.ql-selected,
   .ql-snow .ql-toolbar .ql-picker-item.ql-selected {
-    @apply text-primary!;
+    @apply !text-primary;
   }
 
   .ql-snow .ql-editor code,
   .ql-snow .ql-editor .ql-code-block-container {
-    @apply bg-grey-25! border-grey-100! text-text-primary! text-base!;
+    @apply !bg-grey-25 !border-grey-100 !text-text-primary !text-base;
   }
 
   .ql-editor.ql-blank:before {
-    @apply text-text-primary! opacity-disabled! not-italic!;
+    @apply !text-text-primary !opacity-disabled !not-italic;
   }
 
   .ql-editor {
-    @apply rtl:text-right!;
+    @apply !rtl:text-right;
   }
 
   .ql-formats {
-    @apply ltr:mr-4! ltr:ml-0! rtl:mr-0! rtl:ml-4!;
+    @apply !ltr:mr-4 !ltr:ml-0 !rtl:mr-0 !rtl:ml-4;
   }
 }

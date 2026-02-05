@@ -4,7 +4,7 @@
   }
 
   .MuiBottomNavigationAction-label {
-    @apply font-body text-base! font-medium tracking-normal normal-case;
+    @apply font-body !text-base font-medium tracking-normal normal-case;
   }
 
   .MuiBreadcrumbs-root .MuiButtonBase-root {

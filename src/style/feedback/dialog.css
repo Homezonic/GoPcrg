@@ -20,11 +20,11 @@
   }
 
   .MuiDialogTitle-root {
-    @apply pb-4!;
+    @apply !pb-4;
   }
 
   .MuiDialogActions-root {
-    @apply pt-4!;
+    @apply !pt-4;
   }
 
   .MuiDialog-paperFullScreen {

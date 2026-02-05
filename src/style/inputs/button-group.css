@@ -23,6 +23,6 @@
   }
 
   .MuiButtonGroup-root .MuiButton-root {
-    @apply border-text-contrast/25! ring-0;
+    @apply !border-text-contrast/25 ring-0;
   }
 }

@@ -4,7 +4,7 @@
 
 @layer utilities {
   .MuiCard-root {
-    @apply bg-background-paper rounded-3xl px-3 py-3 shadow-xs!;
+    @apply bg-background-paper rounded-3xl px-3 py-3 !shadow-xs;
   }
 
   .MuiCardContent-root {
@@ -32,7 +32,7 @@
   }
 
   .MuiPaper-outlined.MuiCard-root {
-    @apply border-grey-50 border border-solid shadow-none!;
+    @apply border-grey-50 border border-solid !shadow-none;
   }
 
   .MuiCardHeader-avatar {

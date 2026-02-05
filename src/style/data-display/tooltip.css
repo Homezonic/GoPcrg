@@ -3,7 +3,7 @@
 /* --------------------------- */
 @layer utilities {
   .MuiTooltip-tooltip {
-    @apply border-grey-200 bg-background-paper font-body text-text-primary shadow-darker-sm m-0! rounded-sm border border-solid px-3 py-1.5 text-sm font-semibold;
+    @apply border-grey-200 bg-background-paper font-body text-text-primary shadow-darker-sm !m-0 rounded-sm border border-solid px-3 py-1.5 text-sm font-semibold;
 
     &.large {
       @apply rounded-sm px-4.75 py-[calc(.5rem-1px)] text-base leading-4;
@@ -12,12 +12,12 @@
 
   .MuiTooltip-popper[data-popper-placement*="right"],
   .MuiTooltip-popper[data-popper-placement*="left"] {
-    @apply mx-1!;
+    @apply !mx-1;
   }
 
   .MuiTooltip-popper[data-popper-placement*="top"],
   .MuiTooltip-popper[data-popper-placement*="bottom"] {
-    @apply my-1!;
+    @apply !my-1;
   }
 
   .MuiTooltip-popper .MuiTooltip-tooltip span {
@@ -25,13 +25,13 @@
   }
 
   .MuiTooltip-arrow {
-    @apply text-background-paper h-2! w-2!;
+    @apply text-background-paper !h-2 !w-2;
   }
 
   .MuiTooltip-popper[data-popper-placement*="right"] {
-    @apply ml-2! rtl:mr-2!;
+    @apply !ml-2 !rtl:mr-2;
     .MuiTooltip-arrow {
-      @apply top-1/2! ms-0 transform-[translate(0,-50%)]! overflow-visible bg-transparent rtl:right-[unset] rtl:left-0;
+      @apply !top-1/2 ms-0 transform-[translate(0,-50%!)] overflow-visible bg-transparent rtl:right-[unset] rtl:left-0;
 
       &:after,
       &:before {
@@ -48,9 +48,9 @@
   }
 
   .MuiTooltip-popper[data-popper-placement*="left"] {
-    @apply mr-2! rtl:ml-2!;
+    @apply !mr-2 !rtl:ml-2;
     .MuiTooltip-arrow {
-      @apply top-1/2! me-0 transform-[translate(0,-50%)]! overflow-visible bg-transparent rtl:right-0;
+      @apply !top-1/2 me-0 transform-[translate(0,-50%!)] overflow-visible bg-transparent rtl:right-0;
 
       &:after,
       &:before {
@@ -67,9 +67,9 @@
   }
 
   .MuiTooltip-popper[data-popper-placement*="top"] {
-    @apply mb-2!;
+    @apply !mb-2;
     .MuiTooltip-arrow {
-      @apply left-1/2! mb-0 transform-[translate(-50%,0)]! overflow-visible bg-transparent;
+      @apply !left-1/2 mb-0 transform-[translate(-50%,!0)] overflow-visible bg-transparent;
 
       &:after,
       &:before {
@@ -86,9 +86,9 @@
   }
 
   .MuiTooltip-popper[data-popper-placement*="bottom"] {
-    @apply mt-2!;
+    @apply !mt-2;
     .MuiTooltip-arrow {
-      @apply left-1/2! mt-0 transform-[translate(-50%,0)]! overflow-visible bg-transparent;
+      @apply !left-1/2 mt-0 transform-[translate(-50%,!0)] overflow-visible bg-transparent;
 
       &:after,
       &:before {

@@ -46,7 +46,7 @@
     }
 
     *:first-child {
-      @apply mt-0!;
+      @apply !mt-0;
     }
   }
 }

@@ -3,7 +3,7 @@
 /* --------------------------- */
 @layer utilities {
   .MuiChip-root {
-    @apply font-body font-medium shadow-none!;
+    @apply font-body font-medium !shadow-none;
   }
 
   .MuiChip-sizeSmall {
@@ -29,11 +29,11 @@
   }
 
   .MuiChip-avatarMedium {
-    @apply -ms-0.5! h-5! w-5!;
+    @apply !-ms-0.5 !h-5 !w-5;
   }
 
   .MuiChip-avatarSmall {
-    @apply ms-0! h-4! w-4!;
+    @apply !ms-0 !h-4 !w-4;
   }
 
   .MuiChip-avatarMedium + .MuiChip-label {
@@ -46,9 +46,9 @@
 
   .MuiChip-outlined .MuiChip-deleteIcon,
   .MuiChip-filled .MuiChip-deleteIcon {
-    @apply bg-text-disabled! text-background-paper! -ms-1 me-1 rounded-full outline-hidden! transition-all;
+    @apply !bg-text-disabled !text-background-paper -ms-1 me-1 rounded-full !outline-hidden transition-all;
     &:hover {
-      @apply bg-text-disabled-dark!;
+      @apply !bg-text-disabled-dark;
     }
   }
 
@@ -58,9 +58,9 @@
       @apply bg-primary-light;
     }
     .MuiChip-deleteIcon {
-      @apply bg-text-contrast! text-primary!;
+      @apply !bg-text-contrast !text-primary;
       &:hover {
-        @apply text-primary-light!;
+        @apply !text-primary-light;
       }
     }
   }
@@ -71,9 +71,9 @@
       @apply bg-secondary-light;
     }
     .MuiChip-deleteIcon {
-      @apply bg-text-contrast! text-secondary!;
+      @apply !bg-text-contrast !text-secondary;
       &:hover {
-        @apply text-secondary-light!;
+        @apply !text-secondary-light;
       }
     }
   }
@@ -84,9 +84,9 @@
       @apply bg-accent-1-light;
     }
     .MuiChip-deleteIcon {
-      @apply bg-text-contrast! text-accent-1!;
+      @apply !bg-text-contrast !text-accent-1;
       &:hover {
-        @apply text-accent-1-light!;
+        @apply !text-accent-1-light;
       }
     }
   }
@@ -97,9 +97,9 @@
       @apply bg-accent-2-light;
     }
     .MuiChip-deleteIcon {
-      @apply bg-text-contrast! text-accent-2!;
+      @apply !bg-text-contrast !text-accent-2;
       &:hover {
-        @apply text-accent-2-light!;
+        @apply !text-accent-2-light;
       }
     }
   }
@@ -110,9 +110,9 @@
       @apply bg-accent-3-light;
     }
     .MuiChip-deleteIcon {
-      @apply bg-text-contrast! text-accent-3!;
+      @apply !bg-text-contrast !text-accent-3;
       &:hover {
-        @apply text-accent-3-light!;
+        @apply !text-accent-3-light;
       }
     }
   }
@@ -123,9 +123,9 @@
       @apply bg-accent-4-light;
     }
     .MuiChip-deleteIcon {
-      @apply bg-text-contrast! text-accent-4!;
+      @apply !bg-text-contrast !text-accent-4;
       &:hover {
-        @apply text-accent-4-light!;
+        @apply !text-accent-4-light;
       }
     }
   }
@@ -136,9 +136,9 @@
       @apply bg-info-light;
     }
     .MuiChip-deleteIcon {
-      @apply bg-text-contrast! text-info!;
+      @apply !bg-text-contrast !text-info;
       &:hover {
-        @apply text-info-light!;
+        @apply !text-info-light;
       }
     }
   }
@@ -149,9 +149,9 @@
       @apply bg-success-light;
     }
     .MuiChip-deleteIcon {
-      @apply bg-text-contrast! text-success!;
+      @apply !bg-text-contrast !text-success;
       &:hover {
-        @apply text-success-light!;
+        @apply !text-success-light;
       }
     }
   }
@@ -162,9 +162,9 @@
       @apply bg-error-light;
     }
     .MuiChip-deleteIcon {
-      @apply bg-text-contrast! text-error!;
+      @apply !bg-text-contrast !text-error;
       &:hover {
-        @apply text-error-light!;
+        @apply !text-error-light;
       }
     }
   }
@@ -175,9 +175,9 @@
       @apply bg-warning-light;
     }
     .MuiChip-deleteIcon {
-      @apply bg-text-contrast! text-warning!;
+      @apply !bg-text-contrast !text-warning;
       &:hover {
-        @apply text-warning-light!;
+        @apply !text-warning-light;
       }
     }
   }
@@ -188,9 +188,9 @@
       @apply bg-text-primary-light;
     }
     .MuiChip-deleteIcon {
-      @apply bg-text-contrast! text-text-primary!;
+      @apply !bg-text-contrast !text-text-primary;
       &:hover {
-        @apply text-text-primary-light!;
+        @apply !text-text-primary-light;
       }
     }
   }
@@ -201,9 +201,9 @@
       @apply bg-text-secondary-light;
     }
     .MuiChip-deleteIcon {
-      @apply bg-text-contrast! text-text-secondary!;
+      @apply !bg-text-contrast !text-text-secondary;
       &:hover {
-        @apply text-text-secondary-light!;
+        @apply !text-text-secondary-light;
       }
     }
   }
@@ -214,9 +214,9 @@
       @apply bg-text-disabled-light;
     }
     .MuiChip-deleteIcon {
-      @apply bg-text-contrast! text-text-disabled!;
+      @apply !bg-text-contrast !text-text-disabled;
       &:hover {
-        @apply text-text-disabled-light!;
+        @apply !text-text-disabled-light;
       }
     }
   }
@@ -227,9 +227,9 @@
       @apply bg-grey-50;
     }
     .MuiChip-deleteIcon {
-      @apply bg-text-secondary! text-grey-25!;
+      @apply !bg-text-secondary !text-grey-25;
       &:hover {
-        @apply bg-text-secondary-light! text-grey-50!;
+        @apply !bg-text-secondary-light !text-grey-50;
       }
     }
   }
@@ -237,10 +237,10 @@
   .MuiChip-outlined.MuiChip-outlinedPrimary {
     @apply outline-primary;
     .MuiChip-deleteIcon {
-      @apply bg-primary!;
+      @apply !bg-primary;
 
       &:hover {
-        @apply bg-primary-dark!;
+        @apply !bg-primary-dark;
       }
     }
 
@@ -252,10 +252,10 @@
   .MuiChip-outlined.MuiChip-outlinedSecondary {
     @apply outline-secondary;
     .MuiChip-deleteIcon {
-      @apply bg-secondary!;
+      @apply !bg-secondary;
 
       &:hover {
-        @apply bg-secondary-dark!;
+        @apply !bg-secondary-dark;
       }
     }
 
@@ -267,10 +267,10 @@
   .MuiChip-outlined.MuiChip-outlinedAccent-1 {
     @apply outline-accent-1;
     .MuiChip-deleteIcon {
-      @apply bg-accent-1!;
+      @apply !bg-accent-1;
 
       &:hover {
-        @apply bg-accent-1-dark!;
+        @apply !bg-accent-1-dark;
       }
     }
 
@@ -282,10 +282,10 @@
   .MuiChip-outlined.MuiChip-outlinedAccent-2 {
     @apply outline-accent-2;
     .MuiChip-deleteIcon {
-      @apply bg-accent-2!;
+      @apply !bg-accent-2;
 
       &:hover {
-        @apply bg-accent-2-dark!;
+        @apply !bg-accent-2-dark;
       }
     }
 
@@ -297,10 +297,10 @@
   .MuiChip-outlined.MuiChip-outlinedAccent-3 {
     @apply outline-accent-3;
     .MuiChip-deleteIcon {
-      @apply bg-accent-3!;
+      @apply !bg-accent-3;
 
       &:hover {
-        @apply bg-accent-3-dark!;
+        @apply !bg-accent-3-dark;
       }
     }
 
@@ -312,10 +312,10 @@
   .MuiChip-outlined.MuiChip-outlinedAccent-4 {
     @apply outline-accent-4;
     .MuiChip-deleteIcon {
-      @apply bg-accent-4!;
+      @apply !bg-accent-4;
 
       &:hover {
-        @apply bg-accent-4-dark!;
+        @apply !bg-accent-4-dark;
       }
     }
 
@@ -327,10 +327,10 @@
   .MuiChip-outlined.MuiChip-outlinedError {
     @apply outline-error;
     .MuiChip-deleteIcon {
-      @apply bg-error!;
+      @apply !bg-error;
 
       &:hover {
-        @apply bg-error-dark!;
+        @apply !bg-error-dark;
       }
     }
 
@@ -342,10 +342,10 @@
   .MuiChip-outlined.MuiChip-outlinedSuccess {
     @apply outline-success;
     .MuiChip-deleteIcon {
-      @apply bg-success!;
+      @apply !bg-success;
 
       &:hover {
-        @apply bg-success-dark!;
+        @apply !bg-success-dark;
       }
     }
 
@@ -357,10 +357,10 @@
   .MuiChip-outlined.MuiChip-outlinedInfo {
     @apply outline-info;
     .MuiChip-deleteIcon {
-      @apply bg-info!;
+      @apply !bg-info;
 
       &:hover {
-        @apply bg-info-dark!;
+        @apply !bg-info-dark;
       }
     }
 
@@ -372,10 +372,10 @@
   .MuiChip-outlined.MuiChip-outlinedWarning {
     @apply outline-warning;
     .MuiChip-deleteIcon {
-      @apply bg-warning!;
+      @apply !bg-warning;
 
       &:hover {
-        @apply bg-warning-dark!;
+        @apply !bg-warning-dark;
       }
     }
 
@@ -387,10 +387,10 @@
   .MuiChip-outlined.MuiChip-outlinedText-primary {
     @apply outline-text-primary;
     .MuiChip-deleteIcon {
-      @apply bg-text-primary!;
+      @apply !bg-text-primary;
 
       &:hover {
-        @apply bg-text-primary-dark!;
+        @apply !bg-text-primary-dark;
       }
     }
 
@@ -402,10 +402,10 @@
   .MuiChip-outlined.MuiChip-outlinedText-secondary {
     @apply outline-text-secondary;
     .MuiChip-deleteIcon {
-      @apply bg-text-secondary!;
+      @apply !bg-text-secondary;
 
       &:hover {
-        @apply bg-text-secondary-dark!;
+        @apply !bg-text-secondary-dark;
       }
     }
 
@@ -417,10 +417,10 @@
   .MuiChip-outlined.MuiChip-outlinedText-disabled {
     @apply outline-text-disabled;
     .MuiChip-deleteIcon {
-      @apply bg-text-disabled!;
+      @apply !bg-text-disabled;
 
       &:hover {
-        @apply bg-text-disabled-dark!;
+        @apply !bg-text-disabled-dark;
       }
     }
 
@@ -432,10 +432,10 @@
   .MuiChip-outlined.MuiChip-outlinedGrey {
     @apply outline-grey-200;
     .MuiChip-deleteIcon {
-      @apply bg-text-secondary!;
+      @apply !bg-text-secondary;
 
       &:hover {
-        @apply bg-text-secondary-dark!;
+        @apply !bg-text-secondary-dark;
       }
     }
 

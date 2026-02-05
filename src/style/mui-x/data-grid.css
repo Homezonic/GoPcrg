@@ -41,7 +41,7 @@
   }
 
   .MuiDataGrid-row {
-    @apply rounded-lg! bg-transparent;
+    @apply !rounded-lg bg-transparent;
 
     &:hover {
       @apply bg-grey-25;
@@ -69,7 +69,7 @@
   .MuiDataGrid-menu .MuiPaper-root.MuiPaper-elevation,
   .MuiPopper-root.MuiDataGrid-panel .MuiPaper-root.MuiPaper-elevation,
   .MuiPopper-root.MuiDataGrid-panel .MuiDataGrid-paper {
-    @apply bg-background-paper shadow-darker-sm! outline-grey-50 rounded-lg px-2 py-2 outline-1;
+    @apply bg-background-paper !shadow-darker-sm outline-grey-50 rounded-lg px-2 py-2 outline-1;
   }
 
   .MuiDataGrid-aggregationColumnHeaderLabel {
@@ -127,7 +127,7 @@
 
   .MuiDataGrid-filterFormLogicOperatorInput {
     .MuiSelect-select {
-      @apply min-w-20 pe-8!;
+      @apply min-w-20 !pe-8;
     }
 
     .MuiOutlinedInput-notchedOutline legend {
@@ -187,11 +187,11 @@
 
   .MuiDataGrid-columnsManagementHeader {
     .MuiInputBase-input {
-      @apply py-0.5!;
+      @apply !py-0.5;
     }
 
     .MuiFormControl-root.MuiTextField-root .MuiInputBase-root.MuiOutlinedInput-root {
-      @apply border-grey-200 border border-solid! bg-transparent px-3.75! py-[calc(.375rem-1px)]! outline-2 -outline-offset-1 outline-transparent transition-all;
+      @apply border-grey-200 border !border-solid bg-transparent !px-3.75 !py-[calc(.375rem-1px)] outline-2 -outline-offset-1 outline-transparent transition-all;
 
       .MuiOutlinedInput-notchedOutline {
         @apply hidden;
@@ -253,14 +253,14 @@
   .MuiDataGrid-resizablePanelHandle--horizontal {
     @apply border-primary/40 -ms-2 border-0;
     &:hover {
-      @apply border-s-2 border-t-0! border-b-0!;
+      @apply border-s-2 !border-t-0 !border-b-0;
     }
   }
 
   .MuiDataGrid-resizablePanelHandle--vertical {
     @apply border-primary/40 border-0;
     &:hover {
-      @apply border-s-0! border-e-0! border-t-2;
+      @apply !border-s-0 !border-e-0 border-t-2;
     }
   }
 
@@ -336,7 +336,7 @@
 
     .MuiDataGrid-virtualScrollerRenderZone,
     .MuiDataGrid-topContainer {
-      @apply px-2!;
+      @apply !px-2;
     }
 
     .MuiDataGrid-topContainer {
@@ -356,7 +356,7 @@
     }
 
     .MuiDataGrid-row {
-      @apply bg-background-paper rounded-2xl! shadow-xs!;
+      @apply bg-background-paper !rounded-2xl !shadow-xs;
 
       .MuiDataGrid-cell {
         @apply bg-transparent;
@@ -386,7 +386,7 @@
 
     .MuiDataGrid-columnHeaderCheckbox .MuiDataGrid-columnHeaderTitleContainer,
     .MuiDataGrid-cell.MuiDataGrid-cellCheckbox {
-      @apply ps-4!;
+      @apply !ps-4;
     }
 
     .MuiDataGrid-cell--pinnedRight {
@@ -395,7 +395,7 @@
 
     &.dense {
       .MuiDataGrid-row {
-        @apply rounded-[18px]!;
+        @apply !rounded-[18px];
 
         .MuiDataGrid-cell {
           @apply border-none;
@@ -445,10 +445,10 @@
   .MuiDataGrid-aiAssistantPanel {
     .MuiDataGrid-aiAssistantPanelFooter {
       textarea {
-        @apply min-h-10! border-none! py-2! outline-none;
+        @apply !min-h-10 !border-none !py-2 outline-none;
 
         &:focus {
-          @apply border-none!;
+          @apply !border-none;
         }
       }
     }

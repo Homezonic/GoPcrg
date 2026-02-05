@@ -13,7 +13,7 @@
     }
 
     &.MuiButton-loadingPositionCenter {
-      @apply text-transparent!;
+      @apply !text-transparent;
     }
   }
 
@@ -34,7 +34,7 @@
 
     &.hover-icon-shrink {
       svg {
-        @apply transition-transform!;
+        @apply !transition-transform;
       }
       &:hover,
       &:active,

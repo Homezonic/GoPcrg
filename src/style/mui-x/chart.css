@@ -12,18 +12,18 @@
   }
 
   .MuiChartsAxis-tickLabel {
-    @apply fill-text-secondary font-body! text-sm;
+    @apply fill-text-secondary !font-body text-sm;
   }
 
   .MuiChartsSurface-root text,
   .MuiChartsLegend-root,
   .MuiChartsAxis-label {
-    @apply font-body! text-text-secondary;
+    @apply !font-body text-text-secondary;
   }
 
   .radar-chart text,
   .MuiChartsAxis-label text {
-    @apply font-body! fill-text-secondary;
+    @apply !font-body fill-text-secondary;
   }
 
   .radar-label-center text {
@@ -45,7 +45,7 @@
 
   .MuiRadarGrid-radial,
   .MuiRadarGrid-divider {
-    @apply stroke-opacity-100 stroke-grey-100!;
+    @apply stroke-opacity-100 !stroke-grey-100;
   }
 
   .MuiRadarSeriesPlot-area {

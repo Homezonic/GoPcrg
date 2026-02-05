@@ -5,7 +5,7 @@
   .MuiFab-root {
     @apply shadow-darker-sm h-auto min-h-0 w-auto min-w-0;
     &:focus {
-      @apply shadow-darker-sm!;
+      @apply !shadow-darker-sm;
     }
   }
 

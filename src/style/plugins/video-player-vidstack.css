@@ -3,7 +3,7 @@
 /* --------------------------- */
 
 .plyr {
-  @apply rounded-lg!;
+  @apply !rounded-lg;
 
   .plyr__control svg {
     @apply h-5 w-5;
@@ -37,25 +37,25 @@
   }
 
   .plyr__slider .plyr__slider__track {
-    @apply text-primary!;
+    @apply !text-primary;
   }
 
   .plyr__menu__container {
-    @apply bg-background-paper rounded-lg!;
+    @apply bg-background-paper !rounded-lg;
 
     .plyr__control {
-      @apply text-text-primary rounded-sm!;
+      @apply text-text-primary !rounded-sm;
     }
   }
 
   .plyr__menu__container .plyr__control[role="menuitemradio"]:focus-visible:before,
   .plyr__menu__container .plyr__control[role="menuitemradio"][data-focus]:before,
   .plyr__menu__container .plyr__control[role="menuitemradio"]:hover:before {
-    @apply bg-grey-50!;
+    @apply !bg-grey-50;
   }
 
   .plyr__menu__container .plyr__control[role="menuitemradio"][aria-checked="true"]:before {
-    @apply bg-primary!;
+    @apply !bg-primary;
   }
 
   .plyr__tooltip {
@@ -64,11 +64,11 @@
 
   .plyr__menu__container:after,
   .plyr__tooltip:before {
-    @apply border-t-background-paper!;
+    @apply !border-t-background-paper;
   }
 
   .plyr__menu__container .plyr__control--back:before {
-    @apply bg-transparent! shadow-none!;
+    @apply !bg-transparent !shadow-none;
   }
 
   .plyr__poster {
@@ -77,5 +77,5 @@
 }
 
 .media-player:not([data-started]) .plyr .plyr__controls {
-  @apply pointer-events-none! opacity-0!;
+  @apply !pointer-events-none !opacity-0;
 }

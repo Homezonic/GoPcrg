@@ -4,10 +4,10 @@
 @layer utilities {
   /* Date Picker */
   .MuiPickerPopper-paper {
-    @apply bg-background-paper shadow-darker-sm! outline-grey-50 mt-1 mb-1 rounded-lg p-2 outline-1;
+    @apply bg-background-paper !shadow-darker-sm outline-grey-50 mt-1 mb-1 rounded-lg p-2 outline-1;
 
     &:empty {
-      @apply m-0! border-none! p-0! outline-hidden!;
+      @apply !m-0 !border-none !p-0 !outline-hidden;
     }
 
     &.outlined {
@@ -38,7 +38,7 @@
   .MuiButtonBase-root.MuiPickersDay-root.Mui-selected:active,
   .MuiMonthCalendar-button.Mui-selected:active,
   .MuiYearCalendar-button.Mui-selected:active {
-    @apply bg-primary!;
+    @apply !bg-primary;
   }
 
   .MuiPickersToolbar-root.MuiDatePickerToolbar-root.MuiPickersLayout-toolbar {
@@ -60,7 +60,7 @@
   }
 
   .MuiMonthCalendar-root {
-    @apply border-none!;
+    @apply !border-none;
   }
 
   .MuiDayCalendar-weekNumber {
@@ -364,7 +364,7 @@
   }
 
   label + .MuiPickersInputBase-root {
-    @apply mt-0!;
+    @apply !mt-0;
   }
 
   .MuiPickersCalendarHeader-labelContainer {

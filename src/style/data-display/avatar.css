@@ -4,7 +4,7 @@
 
 @layer utilities {
   .MuiAvatar-root {
-    @apply bg-grey-300 font-body h-9 w-9 border-0! text-sm font-semibold outline-2 -outline-offset-1 outline-transparent;
+    @apply bg-grey-300 font-body h-9 w-9 !border-0 text-sm font-semibold outline-2 -outline-offset-1 outline-transparent;
 
     &.large {
       @apply h-10 w-10;
