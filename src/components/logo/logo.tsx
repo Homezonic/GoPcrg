@@ -2,8 +2,14 @@ import { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { supabase } from "@/lib/supabase";
 import type { SiteSettings } from "@/types/contribution";
+import { cn } from "@/lib/utils";
 
-export default function Logo() {
+interface LogoProps {
+  className?: string;
+  classNameMobile?: string;
+}
+
+export default function Logo({ className, classNameMobile }: LogoProps = {}) {
   const [siteName, setSiteName] = useState("GoPcrg");
 
   useEffect(() => {
@@ -52,7 +58,7 @@ export default function Logo() {
   };
 
   return (
-    <Box className="flex flex-nowrap items-center gap-2">
+    <Box className={cn("flex flex-nowrap items-center gap-2", classNameMobile, className)}>
       {/* Icon/Symbol - Always visible */}
       <svg
         className="fill-current flex-shrink-0"

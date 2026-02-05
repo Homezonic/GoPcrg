@@ -9,8 +9,6 @@ import {
   Menu,
   MenuItem,
   Typography,
-  useMediaQuery,
-  useTheme,
 } from "@mui/material";
 import { useAuth } from "@/contexts/auth-context";
 import NiUser from "@/icons/nexture/ni-user";
@@ -46,8 +44,6 @@ function stringToColor(str: string): string {
 export default function User() {
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [supportDialogOpen, setSupportDialogOpen] = useState(false);
   const open = Boolean(anchorEl);

@@ -1,4 +1,4 @@
-import { MenuItem } from "@/types/types";
+import { MenuItem, Viewer } from "@/types/types";
 
 export const leftMenuItems: MenuItem[] = [
   {
@@ -32,7 +32,7 @@ export const leftMenuItems: MenuItem[] = [
     description: "Manage platform",
     color: "text-primary",
     href: "/admin",
-    canAccess: ["admin"], // Only visible to admins
+    canAccess: [Viewer.ADMIN], // Only visible to admins
     children: [
       {
         id: "admin-settings",

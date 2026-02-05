@@ -1,23 +1,18 @@
 import { useEffect, useState } from "react";
-import { Box, Paper, Typography, Divider } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Box, Paper, Typography } from "@mui/material";
 import Logo from "@/components/logo/logo";
 import { supabase } from "@/lib/supabase";
 
 export default function Page() {
   const [siteName, setSiteName] = useState("GoPcrg");
-  const [supportEmail, setSupportEmail] = useState("support@gopcrg.com");
 
   useEffect(() => {
     const fetchSettings = async () => {
-      const { data } = await supabase.from("site_settings").select("site_name, support_email").single();
+      const { data } = await supabase.from("site_settings").select("site_name").single();
       if (data?.site_name) setSiteName(data.site_name);
-      if (data?.support_email) setSupportEmail(data.support_email);
     };
     fetchSettings();
   }, []);
-
-  const currentYear = new Date().getFullYear();
   return (
     <Box className="bg-waves flex min-h-screen w-full items-center justify-center bg-cover bg-center p-4">
       <Paper elevation={3} className="bg-background-paper shadow-darker-xs w-[60rem] max-w-full rounded-4xl py-14">

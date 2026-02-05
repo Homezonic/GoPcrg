@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import {
@@ -47,7 +46,6 @@ const passwordValidationSchema = yup.object({
 
 export default function Page() {
   const { user, updatePassword } = useAuth();
-  const navigate = useNavigate();
   const { settings: notificationSettings, requestPermission } = useNotifications();
   const [profileSuccess, setProfileSuccess] = useState(false);
   const [profileError, setProfileError] = useState<string | null>(null);

@@ -19,7 +19,6 @@ import {
 } from "@mui/material";
 
 import Logo from "@/components/logo/logo";
-import { DEFAULTS } from "@/config";
 import { useAuth } from "@/contexts/auth-context";
 import NiCheck from "@/icons/nexture/ni-check";
 import NiCross from "@/icons/nexture/ni-cross";

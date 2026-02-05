@@ -3,7 +3,7 @@ import { NotificationCenter } from "../notification-center";
 import User from "../user/user";
 import { Link } from "react-router-dom";
 
-import { Box, Button, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
 import { useLayoutContext } from "@/components/layout/layout-context";
 import Logo from "@/components/logo/logo";
