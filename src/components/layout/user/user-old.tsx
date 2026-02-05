@@ -104,14 +104,14 @@ export default function User() {
         anchorEl={() => anchorRef.current!}
         role={undefined}
         placement="bottom-end"
-        className="mt-3!"
+        className="!mt-3"
         transition
       >
         {({ TransitionProps }) => (
           <Fade {...TransitionProps}>
             <Box>
               <ClickAwayListener onClickAway={handleClose}>
-                <Card className="shadow-darker-sm!">
+                <Card className="!shadow-darker-sm">
                   <CardContent>
                     <Box className="max-w-64 sm:w-72 sm:max-w-none">
                       <Box className="mb-4 flex flex-col items-center">

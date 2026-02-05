@@ -96,8 +96,8 @@ export default function Search() {
       >
         <DialogTitle className="border-grey-100 border-b !py-0">
           <Input
-            classes={{ input: "ps-0!" }}
-            className="w-full py-7!"
+            classes={{ input: "!ps-0" }}
+            className="w-full !py-7"
             placeholder="Search"
             startAdornment={
               <InputAdornment position="start">
@@ -123,31 +123,31 @@ export default function Search() {
               value={tabValue}
             >
               <Tab
-                icon={<NiStructure size="medium" className="me-0! md:me-1!" />}
+                icon={<NiStructure size="medium" className="!me-0 md:!me-1" />}
                 iconPosition="start"
                 label={<Box className="hidden md:flex">All</Box>}
                 value="all"
               />
               <Tab
-                icon={<NiDocumentImage size="medium" className="me-0! md:me-1!" />}
+                icon={<NiDocumentImage size="medium" className="!me-0 md:!me-1" />}
                 iconPosition="start"
                 label={<Box className="hidden md:flex">Products</Box>}
                 value="products"
               />
               <Tab
-                icon={<NiDirectory size="medium" className="me-0! md:me-1!" />}
+                icon={<NiDirectory size="medium" className="!me-0 md:!me-1" />}
                 iconPosition="start"
                 label={<Box className="hidden md:flex">Categories</Box>}
                 value="categories"
               />
               <Tab
-                icon={<NiUsers size="medium" className="me-0! md:me-1!" />}
+                icon={<NiUsers size="medium" className="!me-0 md:!me-1" />}
                 iconPosition="start"
                 label={<Box className="hidden md:flex">Users</Box>}
                 value="users"
               />
               <Tab
-                icon={<NiSlashHexagon size="medium" className="me-0! md:me-1!" />}
+                icon={<NiSlashHexagon size="medium" className="!me-0 md:!me-1" />}
                 iconPosition="start"
                 label={<Box className="hidden md:flex">No Result</Box>}
                 value="result"

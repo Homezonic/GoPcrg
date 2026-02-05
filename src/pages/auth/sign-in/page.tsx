@@ -46,7 +46,7 @@ const InputErrorTooltip = ({ title }: InputErrorProps) => {
           startIcon={<NiCrossSquare size="small" />}
           color="error"
           size="small"
-          className="group icon-only bg-transparent! outline-0!"
+          className="group icon-only !bg-transparent !outline-0"
         ></Button>
       </Tooltip>
     </Box>
@@ -185,7 +185,7 @@ export default function Page() {
                   </FormControl>
 
                   {submitted && !formik.isValid && (
-                    <Alert severity="error" icon={<NiCrossSquare />} className="neutral bg-background-paper/60! mb-4">
+                    <Alert severity="error" icon={<NiCrossSquare />} className="neutral !bg-background-paper/60 mb-4">
                       <AlertTitle variant="subtitle2">The following inputs have errors!</AlertTitle>
                       {Object.entries(formik.errors).map(([key, value]) => {
                         return (
@@ -202,7 +202,7 @@ export default function Page() {
                     </Alert>
                   )}
                   {error && (
-                    <Alert severity="error" icon={<NiCrossSquare />} className="neutral bg-background-paper/60! mb-4">
+                    <Alert severity="error" icon={<NiCrossSquare />} className="neutral !bg-background-paper/60 mb-4">
                       <AlertTitle variant="subtitle2">Sign in failed</AlertTitle>
                       <Typography variant="body2" className="text-text-primary">
                         {error}

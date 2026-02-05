@@ -25,7 +25,7 @@ export default function Page() {
                 </Typography>
               </Box>
 
-              <Alert severity="success" icon={<NiCheckSquare />} className="neutral bg-background-paper/60!">
+              <Alert severity="success" icon={<NiCheckSquare />} className="neutral !bg-background-paper/60">
                 <AlertTitle variant="subtitle2">Email Sent!</AlertTitle>
                 Please check your email to reset your password.
               </Alert>

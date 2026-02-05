@@ -303,14 +303,14 @@ export default function Notifications() {
         anchorEl={anchorRef.current}
         role={undefined}
         placement="bottom-end"
-        className="mt-3!"
+        className="!mt-3"
         transition
       >
         {({ TransitionProps }) => (
           <Fade {...TransitionProps}>
             <Box>
               <ClickAwayListener onClickAway={handleClose}>
-                <Card className="shadow-darker-sm! w-xs md:w-sm">
+                <Card className="!shadow-darker-sm w-xs md:w-sm">
                   <Box className="flex flex-1 flex-row items-start justify-between pe-4">
                     <Typography variant="h6" component="h6" className="card-title px-4 pt-4">
                       Notifications
