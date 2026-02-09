@@ -59,20 +59,28 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
       if (error) throw error;
       setUser(data);
+      return data;
     } catch (error) {
       console.error('Error fetching user profile:', error);
+      throw error;
     } finally {
       setLoading(false);
     }
   };
 
   const signIn = async (email: string, password: string) => {
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
 
     if (error) throw error;
+
+    // Wait for user profile to be loaded before returning
+    if (data.user) {
+      const userProfile = await fetchUserProfile(data.user.id);
+      return userProfile;
+    }
   };
 
   const signUp = async (email: string, password: string, metadata?: { full_name?: string }) => {

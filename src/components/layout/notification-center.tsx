@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+
 import {
   Badge,
   Box,
@@ -11,11 +12,12 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import { supabase } from "@/lib/supabase";
+
 import { useAuth } from "@/contexts/auth-context";
-import type { Enrollment, Payment } from "@/types/contribution";
 import NiBell from "@/icons/nexture/ni-bell";
 import NiCross from "@/icons/nexture/ni-cross";
+import { supabase } from "@/lib/supabase";
+import type { Enrollment, Payment } from "@/types/contribution";
 
 interface Notification {
   id: string;
@@ -34,7 +36,7 @@ export function NotificationCenter() {
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
 
-  const loadNotifications = async () => {
+  const loadNotifications = useCallback(async () => {
     if (!user) return;
 
     const newNotifications: Notification[] = [];
@@ -115,21 +117,18 @@ export function NotificationCenter() {
     } catch (error) {
       console.error("Error loading notifications:", error);
     }
-  };
+  }, [user]);
 
   useEffect(() => {
-    if (user) {
-      loadNotifications();
-      // Refresh every 5 minutes
-      const interval = setInterval(loadNotifications, 5 * 60 * 1000);
-      return () => clearInterval(interval);
-    }
-  }, [user, loadNotifications]);
+    // eslint-disable-next-line
+    loadNotifications();
+    // Refresh every 5 minutes
+    const interval = setInterval(loadNotifications, 5 * 60 * 1000);
+    return () => clearInterval(interval);
+  }, [loadNotifications]);
 
   const markAsRead = (notificationId: string) => {
-    setNotifications((prev) =>
-      prev.map((n) => (n.id === notificationId ? { ...n, read: true } : n))
-    );
+    setNotifications((prev) => prev.map((n) => (n.id === notificationId ? { ...n, read: true } : n)));
 
     const readIds = JSON.parse(localStorage.getItem("gopcrg_read_notifications") || "[]");
     if (!readIds.includes(notificationId)) {
@@ -184,9 +183,9 @@ export function NotificationCenter() {
       </IconButton>
 
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
-        <Box className="w-96 h-full flex flex-col">
+        <Box className="flex h-full w-96 flex-col">
           {/* Header */}
-          <Box className="p-4 flex items-center justify-between border-b border-divider">
+          <Box className="border-divider flex items-center justify-between border-b p-4">
             <Typography variant="h5">Notifications</Typography>
             <IconButton onClick={() => setOpen(false)} size="small">
               <NiCross />
@@ -195,7 +194,7 @@ export function NotificationCenter() {
 
           {/* Actions */}
           {unreadCount > 0 && (
-            <Box className="p-3 border-b border-divider">
+            <Box className="border-divider border-b p-3">
               <Button size="small" variant="text" onClick={markAllAsRead}>
                 Mark all as read
               </Button>
@@ -205,7 +204,7 @@ export function NotificationCenter() {
           {/* Notifications List */}
           <Box className="flex-1 overflow-y-auto">
             {notifications.length === 0 ? (
-              <Box className="flex flex-col items-center justify-center h-full text-center p-8">
+              <Box className="h-full flex-col items-center justify-center p-8 text-center">
                 <Typography variant="h6" className="text-text-secondary mb-2">
                   No notifications
                 </Typography>
@@ -218,7 +217,7 @@ export function NotificationCenter() {
                 {notifications.map((notification, index) => (
                   <Box key={notification.id}>
                     <ListItem
-                      className={`cursor-pointer hover:bg-action-hover ${!notification.read ? "bg-action-selected" : ""}`}
+                      className={`hover:bg-action-hover cursor-pointer ${!notification.read ? "bg-action-selected" : ""}`}
                       onClick={() => markAsRead(notification.id)}
                     >
                       <ListItemText
@@ -226,11 +225,9 @@ export function NotificationCenter() {
                           <Box className="flex items-start gap-2">
                             <Typography variant="body2">{getNotificationIcon(notification.type)}</Typography>
                             <Box className="flex-1">
-                              <Box className="flex items-center justify-between mb-1">
+                              <Box className="mb-1 flex items-center justify-between">
                                 <Typography variant="subtitle2">{notification.title}</Typography>
-                                {!notification.read && (
-                                  <Box className="w-2 h-2 rounded-full bg-primary ml-2" />
-                                )}
+                                {!notification.read && <Box className="bg-primary ml-2 h-2 w-2 rounded-full" />}
                               </Box>
                               <Typography variant="body2" className="text-text-secondary">
                                 {notification.message}

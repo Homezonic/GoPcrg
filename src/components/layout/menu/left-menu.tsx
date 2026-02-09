@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { Box, Paper, Typography } from "@mui/material";
 
+import { useAuth } from "@/contexts/auth-context";
 import { useLayoutContext } from "@/components/layout/layout-context";
 import { PrimaryItem } from "@/components/layout/menu/primary-item";
 import { SecondaryItem } from "@/components/layout/menu/secondary-item";
@@ -18,6 +19,7 @@ export default function LeftMenu() {
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const { user } = useAuth();
   const {
     leftMenuType,
     leftMenuWidth,
@@ -203,6 +205,7 @@ export default function LeftMenu() {
               >
                 {leftMenuItems
                   .filter((x) => !x.hideInMenu)
+                  .filter((x) => !x.canAccess || (user?.role === 'admin' && x.canAccess.includes('ADMIN')))
                   .map((item) =>
                     leftMenuType === MenuType.SingleLayer ? (
                       <SecondaryItem

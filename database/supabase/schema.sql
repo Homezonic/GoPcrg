@@ -409,17 +409,17 @@ BEGIN
     IF NOT FOUND THEN
       RAISE EXCEPTION 'No available slots for this plan';
     END IF;
-  ELSIF TG_OP = 'DELETE' THEN
+  ELSIF TG_OP = 'DELETE' OR (TG_OP = 'UPDATE' AND NEW.status = 'CANCELLED') THEN
     UPDATE plans
     SET available_slots = available_slots + 1
-    WHERE id = OLD.plan_id;
+    WHERE id = COALESCE(NEW.plan_id, OLD.plan_id);
   END IF;
   RETURN NEW;
 END;
-$$ LANGUAGE plpgsql;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
 
 CREATE TRIGGER manage_plan_slots
-  AFTER INSERT OR DELETE ON enrollments
+  BEFORE INSERT OR DELETE OR UPDATE ON enrollments
   FOR EACH ROW EXECUTE FUNCTION update_plan_slots();
 
 -- =====================================================
